@@ -5,6 +5,8 @@
  */
 package ejemplos01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -23,6 +25,11 @@ public class Ejemplo03 {
     
     public static int obtenerSuma(int a, int b){
         int suma;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el valor de a");
+        a = entrada.nextInt();
+        System.out.println("Ingrese el valor de b");
+        b = entrada.nextInt();
         suma = a + b;
         return suma;
         // return a + b;

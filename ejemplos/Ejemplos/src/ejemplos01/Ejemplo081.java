@@ -5,14 +5,18 @@
  */
 package ejemplos01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
  */
-public class Ejemplo08 {
+public class Ejemplo081 {
 
     public static void main(String[] args) {
         // 
+        Scanner entrada = new Scanner(System.in);
+        int opcion;
         String mensajeSuma;
         String mensajeSumaDos;
         mensajeSuma = obtenerTablaSumar(10, 9); // se invoca al método 
@@ -23,8 +27,19 @@ public class Ejemplo08 {
         
         mensajeSumaDos = obtenerTablaMultiplicar(10, 9);
         
-        System.out.printf("%s\n", mensajeSuma);
-        System.out.printf("%s\n", mensajeSumaDos);
+        
+        
+        System.out.println("Presione:\n1. Para sumar\n2. para multiplicar");
+        opcion = entrada.nextInt();
+        if (opcion == 1) {
+            mensajeSuma = obtenerTablaSumar(10, 9);
+            System.out.printf("%s\n", mensajeSuma);
+        } else if (opcion == 2) {
+            mensajeSumaDos = obtenerTablaMultiplicar(10, 9);
+            System.out.printf("%s\n", mensajeSumaDos);
+        } else {
+            System.out.println("Opcion ingresada no es valida");
+        }
         
     }
         
