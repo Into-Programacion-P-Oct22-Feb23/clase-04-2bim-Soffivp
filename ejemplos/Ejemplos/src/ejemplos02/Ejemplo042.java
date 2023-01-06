@@ -11,26 +11,28 @@ import java.util.Scanner;
  *
  * @author reroes
  */
-public class Ejemplo041 {
+public class Ejemplo042 {
 
     public static void main(String[] args) {
         // 
-        Scanner entrada = new Scanner(System.in);
-        int primerValor;
-        int segundoValor;
-        System.out.println("Ingrese un valor");
-        primerValor = entrada.nextInt();
-        System.out.println("Ingrese un valor");
-        segundoValor = entrada.nextInt();
-        obtenerSuma(primerValor, segundoValor);
+        int [] arreglo1 = {100,200,300,400,500};
+        int [] arreglo2 = {1000,2000,3000,4000,5000};
+    
+        int primerValor = 0;
+        int segundoValor = 0;
+        for (int i = 0; i < arreglo1.length; i++) {
+            primerValor = arreglo1[i];
+            segundoValor = arreglo2[i];
+            obtenerSuma(primerValor, segundoValor);
+            //obtenerSuma(arreglo1[i], arreglo[2]); otra forma de hacerlo.
 
+        }
     }
 
     public static void obtenerSuma(int a, int b) {
         int suma;
         suma = a + b;
         System.out.printf("El valor de la suma es: %d\n", suma);
-
     }
 
 }
